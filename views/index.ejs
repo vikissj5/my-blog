@@ -1,0 +1,23 @@
+<div class="author">
+    <h1 class="author__heading">Author</h1>
+    <p class="author__body">Developer</p>
+</div>
+
+<img src="/img/about.jpg" alt="raod leading to heaven" class="road-image" height="528" width="981">
+
+<section class="articles">
+    <h2 class="article__heading">Latest Post</h2>
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+            <li>
+                <a href="#">
+                    <span><%= post.title %></span>
+                    <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+                </a>
+            </li>
+        <% }) %>
+       
+       
+    </ul>
+    <a href="#" class="pagination">&lt; View Older Post</a>
+</section>
